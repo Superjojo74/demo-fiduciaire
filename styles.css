@@ -320,28 +320,15 @@ p { color: var(--gris-60); }
 .hero-title { color: var(--ivoire); margin-bottom: 1.5rem; }
 .hero-title em { color: var(--or); }
 .word-flip {
-  display: inline-block;
-  position: relative;
-  vertical-align: bottom;
-  line-height: 1.15;
-  clip-path: inset(-0.05em -100vmax -0.05em -100vmax);
-}
-.word-flip::before {
-  content: "indépendante";
-  display: block;
-  visibility: hidden;
-  font-style: italic;
-  white-space: nowrap;
-  padding: 0.08em 0;
+  display: inline-grid;
+  vertical-align: baseline;
+  line-height: inherit;
 }
 .word-flip span {
-  display: block;
-  position: absolute;
-  inset: 0;
+  grid-area: 1 / 1;
   white-space: nowrap;
   color: var(--or-2);
   font-style: italic;
-  padding: 0.08em 0;
   animation: flip 9s infinite;
   animation-fill-mode: both;
   opacity: 0;
